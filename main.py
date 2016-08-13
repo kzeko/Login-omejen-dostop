@@ -43,14 +43,14 @@ class MainHandler(BaseHandler):
                 email = user.email()
                 logout_url = users.create_logout_url("/")
 
-                params = {"prijavljen_s_pravico": prijavljen_s_pravico, "logout_url": logout_url, "user":user, "email":email}
+                params = {"prijavljen": prijavljen, "prijavljen_s_pravico": prijavljen_s_pravico, "logout_url": logout_url, "user":user, "email":email}
 
             else:
                 prijavljen = False
                 login_url = users.create_login_url("/")
                 params = {"prijavljen": prijavljen, "login_url": login_url, "user": user}
 
-        self.render_template("hello.html", params=params)
+            self.render_template("hello.html", params=params)
 
         else:
             prijavljen = False
