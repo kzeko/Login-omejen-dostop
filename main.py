@@ -50,7 +50,7 @@ class MainHandler(BaseHandler):
                 login_url = users.create_login_url("/")
                 params = {"prijavljen": prijavljen, "login_url": login_url, "user": user}
 
-            self.render_template("hello.html", params=params)
+            #self.render_template("hello.html", params=params)
 
         else:
             prijavljen = False
