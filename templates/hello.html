@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+{% if prijavljen %}
+    <h1>Si PRIJAVLJEN</h1>
+<p>Pozdravljen, {{user.nickname()}}</p>
+
+<br>
+<a href="{{ logout_url }}">ODJAVA</a>
+{% else %}
+
+Nisi prijavljen
+<br>
+     <a href="{{ login_url }}">PRIJAVA</a>
+{% endif %}
+</body>
+</html>
